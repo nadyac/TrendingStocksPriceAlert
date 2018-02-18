@@ -4,7 +4,7 @@ import requests
 from requests.exceptions import ProxyError
 
 def jsonResults(stocksList):
-	print(json.dumps(stocksList, indent=4))
+	return json.dumps(stocksList, indent=4)
 
 def scrapeYahooFinance(url):
 	try:
@@ -33,8 +33,7 @@ def getTrendingTickers():
 		trendingStock["Price"] = stockPrices[i]
 		trendingStocksList.append(trendingStock)
 
-	
-	jsonResults(trendingStocksList)
+	return jsonResults(trendingStocksList)
 		
 
-getTrendingTickers()
+#getTrendingTickers()
