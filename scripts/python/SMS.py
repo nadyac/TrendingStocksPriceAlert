@@ -2,8 +2,11 @@ from twilio.rest import Client
 
 def process(path):
 	print(path)
+	symbol = path[len("/setAlert?alertSymbol="):-len("&toNumber=12223334444")]
+	return symbol
+
 def setAlert(params):
-	process(params)
+	targetSymbol = process(params)
 	# Your Account SID from twilio.com/console
 	account_sid = "AC805fbc5f452cd5a175c2df46b07b70f4"
 	# Your Auth Token from twilio.com/console
@@ -14,6 +17,6 @@ def setAlert(params):
 	message = client.messages.create(
 	    to="+12019262482", #TODO make this dynamic
 	    from_="+12015966491",
-	    body="You have set up a price alert!")
+	    body="You have set up a price alert for " + targetSymbol +"!")
 
 	print(message.sid)

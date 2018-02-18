@@ -14,7 +14,7 @@ app.controller('stocksListController', function stocksListController($scope,$htt
 			data:targetSymbol,
 			params:{
 				alertSymbol:targetSymbol,
-				toNumber:"+12019262482"
+				toNumber:"12019262482"
 			}
 		}
 		$http.get("/setAlert",config)

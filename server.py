@@ -22,7 +22,7 @@ class MyHandler(SimpleHTTPRequestHandler):
         elif "setAlert" in self.path:
         	#TODO add params for phoneNumber and stock symbol
         	content = setAlert(str(self.path))
-        	self.respond("")
+        	self.respond("OK")
         else:
             super(MyHandler, self).do_GET()
 
