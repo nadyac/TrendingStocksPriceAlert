@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 import json
 import requests
 from requests.exceptions import ProxyError
-#how are you planning to trigger this?
+
 def jsonResults(stocksList):
 	return json.dumps(stocksList, indent=4)
 
@@ -14,7 +14,7 @@ def scrapeYahooFinance(url):
 		soup = BeautifulSoup(data, 'html.parser', parse_only=targetData)
 		return soup
 	except Error:
-		print("An Error Occurred with the Request.")
+		print("An Error Occurred with the Request.", Error)
 	
 def getTrendingTickers():
 	soup = scrapeYahooFinance("http://finance.yahoo.com/trending-tickers")
@@ -35,5 +35,3 @@ def getTrendingTickers():
 
 	return jsonResults(trendingStocksList)
 		
-
-#getTrendingTickers()

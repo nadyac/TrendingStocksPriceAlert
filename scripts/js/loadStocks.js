@@ -5,7 +5,7 @@ $(document).ready(function(){
       url:'/getStocks',
       cache:false,
       async:'asynchronous',
-      dataType:'json', //if you want json
+      dataType:'json',
       success: function(data) {
         console.log(JSON.stringify(data))
       },
