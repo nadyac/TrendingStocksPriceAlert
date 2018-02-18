@@ -1,6 +1,7 @@
 import time
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from scripts.python.getTrendingStocks import getTrendingTickers
+from scripts.python.SMS import setAlert
 
 HOST_NAME = 'localhost'
 PORT_NUMBER = 8000
@@ -18,6 +19,10 @@ class MyHandler(SimpleHTTPRequestHandler):
             # we can retrieve stocks within this scope and then pass info to self.respond
             content = getTrendingTickers()
             self.respond(content)
+        elif "setAlert" in self.path:
+        	#TODO add params for phoneNumber and stock symbol
+        	content = setAlert(str(self.path))
+        	self.respond("")
         else:
             super(MyHandler, self).do_GET()
 

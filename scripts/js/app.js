@@ -8,4 +8,18 @@ app.controller('stocksListController', function stocksListController($scope,$htt
 	    .then(function(response) {
 	        $scope.stocks = response.data;
 	    });
+
+	$scope.setAlert = function(targetSymbol){
+		config = {
+			data:targetSymbol,
+			params:{
+				alertSymbol:targetSymbol,
+				toNumber:"+12019262482"
+			}
+		}
+		$http.get("/setAlert",config)
+	    .then(function(response) {
+	        console.log(response);
+	    });
+	}
 });

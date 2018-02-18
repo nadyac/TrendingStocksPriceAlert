@@ -17,3 +17,5 @@ $(document).ready(function(){
       }
    });
 });
+
+// ---------- NOT PART OF APP, JUST HERE FOR REFERENCE -----------
