@@ -1,12 +1,72 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> <!-- ng-app is Angular directive that specifies the root element of our app
+can be the entire html page like in this case, or just a portion of the page -->
+	<head><meta charset="utf-8">
+		<!--=================================== SCRIPTS ==============================================-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="./scripts/js/loadStocks.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		<script type="text/javascript" src="./scripts/js/app.js"></script>
+
+		<!--====================================== CSS ===============================================-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional BS theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript for BS-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!--==========================================================================================-->
+		<link rel="stylesheet" type="text/css" href="style/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<!--===========================================================================================-->
+		<link rel="stylesheet" type="text/css" href="style/vendor/animate/animate.css">
+		<!--============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="style/vendor/select2/select2.min.css">
+		<!--==========================================================================================-->
+		<link rel="stylesheet" type="text/css" href="style/vendor/perfect-scrollbar/perfect-scrollbar.css">
+		<!--==========================================================================================-->
+		<link rel="stylesheet" type="text/css" href="style/css/util.css">
+		<link rel="stylesheet" type="text/css" href="style/css/main.css">
+		<!--==========================================================================================-->
 		<title>Trending Stocks</title>
 	</head>
 
-	<body>
-		<button type="button" id="home" value="value">Set Price Alert</button>
-		
+	<body ng-controller="stocksListController">
+		<div class="limiter">
+			<div class="container-table100">
+				<div class="wrap-table100">
+					<div class="table100 ver1 m-b-110">
+						<div class="table100-head">
+							<table>
+								<thead>
+									<tr class="row100 head">
+										<th class="cell100 column1">Stock Symbol</th>
+										<th class="cell100 column2">Price</th>
+										<th class="cell100 column3">Action</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+
+						<div class="table100-body js-pscroll">
+							<table>
+								<tbody><!-- the expression in {{}} will be replaced by the values of the expressions-->
+									<!-- ng-repeat is an ANgular repeater directive. It tells AngularJS to create <li> element
+				for each of the stocks in the list, using one <li> tag as template-->
+									<tr ng-repeat="stock in stocks" class="row100 body">
+										<td class="cell100 column1">
+											<span>{{stock.StockSymbol}}</span>
+										</td>
+										<td class="cell100 column2">
+											<span>{{stock.Price}}</span>
+										</td>
+										<td class="cell100 column3">
+											<span><button type="button" id="home" value="value">Set Price Alert</button></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
