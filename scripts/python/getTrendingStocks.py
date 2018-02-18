@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 import json
 import requests
 from requests.exceptions import ProxyError
-
+#how are you planning to trigger this?
 def jsonResults(stocksList):
 	return json.dumps(stocksList, indent=4)
 

@@ -1,31 +1,14 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./scripts/js/loadStocks.js"></script>
 		<title>
 		</title>
+
 	</head>
 
 	<body>
-		<button type="button" id="home" value="value">Click Me</button>
-
-		<script>
-			$('#home').click(function(){
-
-			 $.ajax({
-			      type:'post',
-			      url:'/',
-			      cache:false,
-			      async:'asynchronous',
-			      //dataType:'json', //if you want json
-			      success: function(data) {
-			        console.log(JSON.stringify(data))
-			      },
-			      error: function(request, status, error) {
-			        console.log("Error: " + error)
-			      }
-			   });
-			});
-			</script>
+		<button type="button" id="home" value="value">Set Price Alert</button>
+		
 	</body>
 </html>
