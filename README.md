@@ -9,15 +9,33 @@ Get Price Alert for Trending Stocks listed on Yahoo Finance. This app demonstrat
 4) Sends SMS to user after they click a "Set Price Alert" button, notifying them of the price alert for the selected stock
 
 ### Features
-* Webscraping (python)
+* Webscraping via BeautifulSoup(python)
 * Server with request handlers (python)
 * AngularJS framework (JS)
 * Twilio API for SMS (Python)
 
 
-#### Structure
+### Installs Needed for the Project
+* Python 3
+* Twilio API Python helper
 
-# Project tree
+## APP IMAGES & HOW-TO
+
+#### 1) Run the python http server. 
+* Go to the root directory and run server.py on the terminal or cmd
+      * You will see the server output its start time.
+      * App will run on 127.0.0.1:8000
+<a href="https://imgur.com/nm8Ly88"><img src="https://i.imgur.com/nm8Ly88.png" title="source: imgur.com" /></a>
+
+#### 2) Go to the Homepage for the app.
+* In your browser, type 127.0.0.1:8000 in the search bar. This is where the homepage is served.
+* As soon as the page is loaded you should see the stocks load. You may verify that they are
+accurate by going to <a href="http://finance.yahoo.com/trending-tickers>this Yahoo Finance page</a>
+<a href="https://imgur.com/NkEPC1U"><img src="https://i.imgur.com/NkEPC1U.png" title="source: imgur.com" /></a>
+
+### 3) Type in your phone 
+
+### Project tree
 TrendingStocksPriceAlert</br>
 &nbsp;&nbsp;&nbsp; + server.py</br>
 &nbsp;&nbsp;&nbsp; + index.html</br>
@@ -30,6 +48,8 @@ TrendingStocksPriceAlert</br>
 <space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +---app.js</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +style/</br>
 <space><space><space>&nbsp;&nbsp;&nbsp; css files borrowed from ColorLib
+
+
 
       
       
