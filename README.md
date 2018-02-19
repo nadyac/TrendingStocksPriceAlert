@@ -17,16 +17,27 @@ Get Price Alert for Trending Stocks listed on Yahoo Finance. This app demonstrat
 
 #### Structure
 TrendingStocksPriceAlert
+
 |   server.py
+
 |   index.html
-│   README.md│
+
+│   README.md
+
 └───scripts
+
 │   └───python
+
 │   |   │   getTrendingStocks.py
+
 │   |   │   SMS.py
+
 │   └─── js
+
 │       |   app.js
+
 └───style
+
     │   css files borrowed from ColorLib
 
     
