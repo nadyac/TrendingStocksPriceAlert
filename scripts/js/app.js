@@ -16,9 +16,9 @@ app.controller('stocksListController', function stocksListController($scope,$htt
 	        $scope.stocks = response.data; // Assign $scope variable stocks to the stocks JSON so that  
 	    });								   // it can be passed to the view for the user to see
 
+	 // 
 	$scope.setAlert = function(targetSymbol, phoneNumber){
 		config = {
-			data:targetSymbol,
 			params:{
 				alertSymbol: targetSymbol,
 				toNumber:phoneNumber
