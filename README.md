@@ -24,11 +24,11 @@ TrendingStocksPriceAlert</br>
 &nbsp;&nbsp;&nbsp; + README.md</br>
 &nbsp;&nbsp;&nbsp; + scripts/</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + python/</br>
-<space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + getTrendingStocks.py</br>
-<space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + SMS.py</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +---js/</br>
-<space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + app.js</br>
-&nbsp;&nbsp;&nbsp; +---style/</br>
+<space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +---getTrendingStocks.py</br>
+<space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +---SMS.py</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + js/</br>
+<space><space><space>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +---app.js</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +style/</br>
 <space><space><space>&nbsp;&nbsp;&nbsp; css files borrowed from ColorLib
 
       
