@@ -22,14 +22,14 @@ TrendingStocksPriceAlert
 +   server.py
 +   index.html
 +   README.md</br>
-+---scripts/</br>
-    +---python/</br>
-        + getTrendingStocks.py</br>
-        + SMS.py</br>
-    +---js/</br>
-        + app.js</br>
-+---style/</br>
-    css files borrowed from ColorLib
+&nbsp;&nbsp;&nbsp;+---scripts/</br>
+&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;+---python/</br>
+&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;+ getTrendingStocks.py</br>
+&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;+ SMS.py</br>
+&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;+---js/</br>
+&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;+ app.js</br>
+&nbsp;&nbsp;&nbsp;+---style/</br>
+&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;css files borrowed from ColorLib
 
       
       
