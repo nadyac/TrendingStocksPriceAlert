@@ -16,31 +16,21 @@ Get Price Alert for Trending Stocks listed on Yahoo Finance. This app demonstrat
 
 
 #### Structure
+
+# Project tree
 TrendingStocksPriceAlert
++   server.py
++   index.html
++   README.md</br>
++---scripts/</br>
+    +---python/</br>
+        + getTrendingStocks.py</br>
+        + SMS.py</br>
+    +---js/</br>
+        + app.js</br>
++---style/</br>
+    css files borrowed from ColorLib
 
-    |   server.py
-
-    |   index.html
-
-    │   README.md
-
-    └───scripts
-
-    │   └───python
-
-    │   |  getTrendingStocks.py
-
-    |   │   SMS.py
-
-    └─── js
-
-        |   app.js
-
-    └───style
-
-    │   css files borrowed from ColorLib
-
-    
       
       
 
