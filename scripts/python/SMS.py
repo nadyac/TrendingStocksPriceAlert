@@ -1,9 +1,9 @@
 from twilio.rest import Client
 
 def getSymbol(path):
-	symbol = path[len("/setAlert?alertSymbol="):-len("&toNumber=12223334444")]
+	symbol = path[len("/setAlert?alertSymbol="):-len("&toNumber=2223334444")]
 	return symbol
-	
+
 def getPhoneNumber(path):
 	splitPath = path.split("&")
 	phoneNumberParam = splitPath[1]
@@ -15,9 +15,9 @@ def setAlert(pathWithParams):
 	toNumber = getPhoneNumber(pathWithParams)
 
 	# Your Account SID from twilio.com/console
-	account_sid = "AC805fbc5f452cd5a175c2df46b07b70f4"
+	account_sid = ""
 	# Your Auth Token from twilio.com/console
-	auth_token  = "56c2940e7140db799e623a03ec281786"
+	auth_token  = ""
 
 	client = Client(account_sid, auth_token)
 

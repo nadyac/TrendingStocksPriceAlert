@@ -13,7 +13,7 @@ can be the entire html page like in this case, or just a portion of the page -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript for BS-->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<!--==========================================================================================-->
+		<!--============================STYLESHEETS BORROWED FROM COLORLIB ==========================================-->
 		<link rel="stylesheet" type="text/css" href="style/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<!--===========================================================================================-->
 		<link rel="stylesheet" type="text/css" href="style/vendor/animate/animate.css">
@@ -28,7 +28,21 @@ can be the entire html page like in this case, or just a portion of the page -->
 		<title>Trending Stocks</title>
 	</head>
 
-	<body ng-controller="stocksListController">
+	<body ng-controller="stocksListController"> <!-- the body gets its logic handled by a controller called stocksListController-->
+		<div id="headerText" class="page-header">
+			<h1>Trending Stocks Price Alert</h1>
+			<h1><small>This page displays the latest <a href="https://finance.yahoo.com/trending-tickers">trending stocks</a> posted on Yahoo Finance and allows you to sign up for text notifications when the price of a desired stock changes. The stocks are obtained via
+			webscraping. Reload the page to scrape the latest results from Yahoo Finance.</small><h1>
+			<div id="inputPhoneNumber" class="row">
+			  <div class="col-lg-6">
+			    <div class="input-group">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button" ng-model="phoneNumber" ng-click=setPhoneNumber(phoneNumber)>Submit</button>
+			      </span>
+			      <input ng-model="phoneNumber" ng-value="number" type="text" class="form-control" placeholder="Your Phone Number goes here (ex. 1235558888)">
+			    </div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+		</div>
 		<div class="limiter">
 			<div class="container-table100">
 				<div class="wrap-table100">
@@ -47,9 +61,10 @@ can be the entire html page like in this case, or just a portion of the page -->
 
 						<div class="table100-body js-pscroll">
 							<table>
-								<tbody><!-- the expression in {{}} will be replaced by the values of the expressions-->
+								<tbody>
 									<!-- ng-repeat is an ANgular repeater directive. It tells AngularJS to create <li> element
-				for each of the stocks in the list, using one <li> tag as template-->
+										 for each of the stocks in the list, using one <li> tag as template-->
+									<!-- the expression in {{}} will be replaced by the values of the expressions-->
 									<tr ng-repeat="stock in stocks" class="row100 body">
 										<td class="cell100 column1">
 											<span>{{stock.StockSymbol}}</span>
@@ -58,7 +73,8 @@ can be the entire html page like in this case, or just a portion of the page -->
 											<span>{{stock.Price}}</span>
 										</td>
 										<td class="cell100 column3">
-											<span><button type="button" id="priceAlertbtn" class="btn btn-default" ng-click="setAlert(stock.StockSymbol)" value="value">Set Price Alert</button></span>
+											<!-- ng-click behaves like onclick event -->
+											<span><button type="button" id="priceAlertbtn" class="btn btn-default" ng-click="setAlert(stock.StockSymbol,phoneNumber)" value="value">Set Price Alert</button></span>
 										</td>
 									</tr>
 								</tbody>
