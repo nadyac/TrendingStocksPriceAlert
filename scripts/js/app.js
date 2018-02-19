@@ -31,7 +31,9 @@ app.controller('stocksListController', function stocksListController($scope,$htt
 		if($scope.phoneNumber != "" && typeof $scope.phoneNumber != 'undefined'){
 			$http.get("/setAlert",config) //make request to setAlert URI with the symbol and phone # as params
 		    .then(function(response) {
-		        console.log(response);
+		        if(response.status == 200){
+		        	alert("Success");
+		        }
 		    });
 		} else{
 			alert("Please submit a phone number.")

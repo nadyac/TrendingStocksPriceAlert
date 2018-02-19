@@ -537,3 +537,7 @@ th, td {
   margin-right:30px;
   margin-top:15px;
 }
+
+.alert{
+  display:none;
+}

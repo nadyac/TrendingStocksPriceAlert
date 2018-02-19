@@ -25,7 +25,7 @@ class MyHandler(SimpleHTTPRequestHandler):
         	# i.e. the request is something like localhost:8000?setAlert=[symbol]&toNumber=[phone#]
         	# we can parse this request path to get the params.
         	content = setAlert(str(self.path))
-        	self.respond("OK")
+        	self.respond({"response":"OK"})
         else:
             super(MyHandler, self).do_GET()
 

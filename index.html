@@ -74,7 +74,11 @@ can be the entire html page like in this case, or just a portion of the page -->
 										</td>
 										<td class="cell100 column3">
 											<!-- ng-click behaves like onclick event -->
-											<span><button type="button" id="priceAlertbtn" class="btn btn-default" ng-click="setAlert(stock.StockSymbol,phoneNumber)" value="value">Set Price Alert</button></span>
+											<span><button type="button" class="btn btn-default" ng-click="setAlert(stock.StockSymbol,phoneNumber)">Set Price Alert</button></span>
+											  <div class="alert alert-success alert-dismissable fade in">
+											    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+											    <strong>Success!</strong>
+											  </div>
 										</td>
 									</tr>
 								</tbody>
