@@ -1,5 +1,5 @@
 # TrendingStocksPriceAlert
-Get Price Alert for Trending Stocks listed on Yahoo Finance. This app demonstrates features typically seen in hackathon submissions. As such it exemplifies how to make a webapp that fetches live data from a source (Yahoo) and allows the user to interact with it on the webpage. It uses an API, a JS Framework (Angular), and has multiple components in different languages that talk to eachother via common protocols.  
+Get Price Alert for Trending Stocks listed on Yahoo Finance. As a webapp that fetches live data and allows the user to interact with it via a webpage, this project demonstrates features typically seen in hackathon submissions. It uses an API (Twilio), a JS Framework (Angular), and has multiple components in different languages that talk to eachother via common protocols.  
 
 ### Play-by-play, this App:
 * Listens for get requests via a python http server
@@ -15,8 +15,8 @@ Get Price Alert for Trending Stocks listed on Yahoo Finance. This app demonstrat
 * Twilio API for SMS (Python)
 
 ### Installs Needed for the Project
-* Python 3
-* Twilio API Python helper
+* <a href="https://www.python.org/downloads/release/python-364/">Python 3</a>
+* <a href="https://www.twilio.com/">Twilio API Python helper</a>
 
 ## APP IMAGES & HOW-TO
 
@@ -42,7 +42,14 @@ accurate by going to <a href="http://finance.yahoo.com/trending-tickers>this Yah
 
 <a href="https://imgur.com/JLlVl9F"><img src="https://i.imgur.com/JLlVl9F.png" title="source: imgur.com" /></a>
 
-### Project tree
+### Appendix
+=============
+#### Twilio API Python handler. 
+* This is all the code needed to send a simple text message. Note, you need to use your own SID (not mine which is shown in the picture). Naturally you must also use your own secret API key.
+
+<a href="https://imgur.com/dLaHb8N"><img src="https://i.imgur.com/dLaHb8N.png" title="source: imgur.com" /></a>
+
+#### Project tree
 TrendingStocksPriceAlert</br>
 &nbsp;&nbsp;&nbsp; + server.py</br>
 &nbsp;&nbsp;&nbsp; + index.html</br>
